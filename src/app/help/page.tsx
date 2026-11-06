@@ -1,0 +1,3 @@
+import { Card, H1 } from "@/components/ui";
+const faq = [["Czy aplikacja jest darmowa?", "Tak, bez płatności i planów."], ["Czy pokazuje terminy egzaminów?", "Nie – celowo, nigdzie w aplikacji."], ["Czym jest tryb demo?", "Działa bez zewnętrznego źródła; nie wykonuje prawdziwego monitorowania."], ["Jak założyć profil?", "Moje profile → nazwa i kategoria → Dodaj. Potem wybierz WORD w katalogu."], ["Gdzie są moje dane?", "W localStorage przeglądarki; eksportuj JSON jako kopię."]];
+export default function Help() { return (<div><H1>Centrum pomocy</H1><div className="space-y-3">{faq.map(([q, a]) => <Card key={q}><div className="font-medium">{q}</div><div className="text-sm text-gray-400">{a}</div></Card>)}</div></div>); }
